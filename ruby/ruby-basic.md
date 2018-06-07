@@ -142,6 +142,8 @@ hihi{puts "hihi"}
 #hihi
 ~~~
 
+### 9.string
+
 ~~~ruby
 name ="taewoo"
 => "taewoo"
@@ -152,3 +154,30 @@ b='#{name}님 안녕하소'
 #"\#{name}님 안녕하소
 ~~~
 
+~~~ruby
+my_name="taewoo"
+#=> "taewoo"
+ my_name.upcase! #!붙이면 객체를 바꿔서 저장
+#=> "TAEWOO"
+ my_name
+#=> "TAEWOO"
+~~~
+
+### 10.hash
+
+- key,value로 이루어져있다!!
+
+  ~~~ruby
+  hash1 ={:key => value}
+  hash2 = {key: value}
+  hash3 = {"key" => value}
+  ~~~
+
+- each 반복하기
+
+  ~~~ruby
+  hash1.each do|k,v|  # k,v는                                       	puts "#{k}:#{v}"  
+   end  
+  ~~~
+
+  
