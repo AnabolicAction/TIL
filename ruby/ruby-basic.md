@@ -76,4 +76,79 @@ end
 - 대부분의 언어
   - 클래스 밖 :function
   - 클래스 안:method
-  - 
+- 루비에서는 모든 function은 method
+
+~~~ruby
+#루비에서의 method 선언
+def simple
+ puts "simple!!"
+ end  
+=> :simple
+def asdf()
+ puts "asdf"
+ end  
+=> :asdf
+~~~
+
+- ~~~ruby
+  #루비에서는 return이 없을때 마지막 연산 값을 return 합니다
+   def add2(a,b)
+   a+b
+  end  
+  => :add2
+  add2(1,2)
+  => 3
+  #루비에서는 return을 선택적으로 사용가능
+  def divide(a,b)
+   return "I don't think so" if b==0
+   a/b
+  end
+  divide(4,0)
+  ~~~
+
+- 기본 매개변수
+
+- ~~~ruby
+  def factorial(n)
+      n==0 ? 1:n*factorial(n-1)
+  end
+  factoral #ArgumentError: wrong number of arguments (given 0, expected 1)
+  def factorial_d(n=5)
+      n==0 ? 1:n*factorial_d(n-1)
+  end
+  facrtoral_d #120
+  ~~~
+
+### 8.block
+
+~~~ruby
+#완벽하게 같은 문장입니다
+3.times {puts "hello"}
+
+3.times do |asdf|
+puts asdf #요부분이 block 입니다.
+ end  
+
+~~~
+
+~~~ruby
+def hihi
+	return "no block" unless block_given?
+	yield
+end  
+hihi 
+#=> "no block"
+hihi{puts "hihi"}
+#hihi
+~~~
+
+~~~ruby
+name ="taewoo"
+=> "taewoo"
+a="#{name}님 안녕하소"                             
+#"taewoo님 안녕하소"
+
+b='#{name}님 안녕하소'
+#"\#{name}님 안녕하소
+~~~
+
