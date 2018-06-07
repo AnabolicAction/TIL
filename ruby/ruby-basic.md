@@ -169,14 +169,14 @@ my_name="taewoo"
 
   ~~~ruby
   hash1 ={:key => value}
-  hash2 = {key: value}
+  hash2 = {key: value} #key와 :붙어있어야함
   hash3 = {"key" => value}
   ~~~
 
 - each 반복하기
 
   ~~~ruby
-  hash1.each do|k,v|  # k,v는                                       	puts "#{k}:#{v}"  
+  hash1.each do|k,v|  # k,v는 어떠한 문자도 적어도됨                puts "#{k}:#{v}"  
    end  
   ~~~
 
