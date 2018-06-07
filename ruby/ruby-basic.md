@@ -71,3 +71,9 @@ else puts "get out!!"
 end  
 ~~~
 
+### 7.method
+
+- 대부분의 언어
+  - 클래스 밖 :function
+  - 클래스 안:method
+  - 
